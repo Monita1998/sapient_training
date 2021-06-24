@@ -1,0 +1,10 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.all @ categories='loveoffashion.base'}" />
+<div data-sly-use.accordion ="com.loveoffashion.core.models.Accordion">
+<h1>FAQ </h1>
+   <div data-sly-list.accordionItem="${accordion.accordionlist}">
+       <button class="accordion">${accordionItem.tabTitle}</button>
+		<div class="panel">
+  		<p>${accordionItem.text}</p>
+		</div>
+   </div>
+</div>

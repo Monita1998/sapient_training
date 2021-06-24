@@ -1,0 +1,21 @@
+<div data-sly-use.carousel="com.loveoffashion.core.models.Carousel">
+
+<div class="slideshow-container">
+
+
+
+<div data-sly-list.carouselItem="${carousel.carousellist}">
+<div class="mySlides fade">
+
+<img src="${carouselItem.image}" style="width:100%">
+<div class="text">${carouselItem.text} </div>
+</div>
+
+
+
+</div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+</div>
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.all @ categories='loveoffashion.carousel'}" />
